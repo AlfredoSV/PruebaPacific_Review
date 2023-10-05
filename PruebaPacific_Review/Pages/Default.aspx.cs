@@ -16,7 +16,8 @@ namespace PruebaPacific_Review.Pages
 
             if (!IsPostBack && DateForm.Text == string.Empty)
             {
-                DateForm.Text = $"El sistema se corrio por primera vez a las {DateTime.Now.Date}";
+                DateTime date = DateTime.Now;
+                DateForm.Text = $"El sistema se corrio por primera vez a las {date.ToString("HH:mm:ss")}";
                 Session["clientes"] = null;
             }
             else            
